@@ -31,6 +31,15 @@ public class AnnotationOnType<@Bar T extends @Foo HashMap & @Foo Serializable> e
 
   Map<@Foo String, @Foo T> nonNullString;
 
+  private void method(int @Foo ... param){
+
+  }
+
+
+  private String test(List<@Foo String> @Foo ... lists) @Foo [] @Foo [] {
+    return new String[12][21];
+  }
+
   @Override
   public String[][] test() {
     return new String[0][];
