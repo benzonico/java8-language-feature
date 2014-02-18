@@ -9,14 +9,18 @@ import java.util.Map;
 public class AnnotationOnType<@Bar T extends @Foo HashMap & @Foo Serializable> extends java.util. @Foo HashMap implements @Foo Serializable, InterfaceTest {
   @SuppressWarnings("unchecked") private @Foo int @Foo [] @Foo[] tab;
 
-  public static final AnnotationOnType[]@Foo[] tabs = new AnnotationOnType @Foo [12] @Qix @Foo [12];
+  public static final AnnotationOnType[]@Foo[] tabs = new @Foo AnnotationOnType @Foo [12] @Qix @Foo [12];
 
-  public int[] @Foo [] getTab(@Foo int toto) throws @Foo IllegalStateException{
+  private Object var = new @Foo innerClass("literal");
+  private int[][][] plop = new @Foo int @Foo [12][] @Foo[];
+
+  public int[] @Foo [] getTab(@Foo int toto) throws @Foo IllegalStateException, @Qix RuntimeException, AnnotationOnType.@Foo innerException{
     try {
       throw new IllegalAccessException();
     }catch (@Foo IllegalAccessException e){
 
     }
+    String name  =  Foo.class.getName();
     if(toto>0) {
       throw new @Foo IllegalStateException("message");
     }
@@ -43,5 +47,16 @@ public class AnnotationOnType<@Bar T extends @Foo HashMap & @Foo Serializable> e
   @Override
   public String[][] test() {
     return new String[0][];
+  }
+
+  public static class innerException extends Exception{
+
+  }
+  public static class innerClass {
+    private final String titi;
+
+    public innerClass(@Foo String titi){
+      this.titi = titi;
+    }
   }
 }
