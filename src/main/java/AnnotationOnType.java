@@ -24,6 +24,9 @@ public class AnnotationOnType<@Bar T extends @Foo HashMap & @Foo Serializable> e
     if(toto>0) {
       throw new @Foo IllegalStateException("message");
     }
+    if(name instanceof @Foo String){
+      System.out.println(toto);
+    }
     return tab;
   }
 
