@@ -18,7 +18,6 @@ public class AnnotationOnType<@Bar T extends @Foo HashMap & @Foo Serializable> e
     try {
       throw new IllegalAccessException();
     }catch (@Foo IllegalAccessException e){
-
     }
     String name  =  Foo.class.getName();
     if(toto>0) {
@@ -55,11 +54,18 @@ public class AnnotationOnType<@Bar T extends @Foo HashMap & @Foo Serializable> e
   public static class innerException extends Exception{
 
   }
+  public class nonStaticInnerClass {
+
+  }
   public static class innerClass {
     private final String titi;
 
     public innerClass(@Foo String titi){
       this.titi = titi;
     }
+  }
+
+  public class toto extends @Foo AnnotationOnType. @Foo nonStaticInnerClass{
+
   }
 }
